@@ -149,7 +149,7 @@
 <body class="bg-gray-50 overflow-x-hidden">
 
     <!-- Top Banner -->
-  <div class="bg-green-900 text-white text-center py-2 px-4 sticky top-0 z-50">
+  <div class="bg-green-900 text-white text-center py-2 px-4  top-0 z-50">
     <p class="text-sm font-medium">ORDER DESSERTS FOR LOCAL PICK UP</p>
 </div>
 
@@ -159,7 +159,7 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
                 <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center">
+                <div class="flex-shrink-0 flex items-center min-w-0">
                     <img src="https://images.pexels.com/photos/3992206/pexels-photo-3992206.jpeg?auto=compress&cs=tinysrgb&w=200&h=100&fit=crop"
                         alt="Magnolia Bakery" class="h-12 w-auto object-contain">
                     <div class="ml-3 hidden sm:block">
@@ -272,25 +272,7 @@
     </svg>
 </button>
 
-<!-- Modal Background -->
-<div id="signInModal" class="fixed inset-0  overflow-hidden bg-black bg-opacity-0 flex items-center justify-center hidden z-50">
-    <!-- Modal Card -->
-    <div class="bg-white rounded-xl w-11/12 sm:w-96 p-6 relative">
-        <!-- Close Button -->
-        <button id="closeModal" class="absolute top-3 right-3 text-gray-600 hover:text-gray-900">
-            ✕
-        </button>
 
-        <!-- Modal Content -->
-        <h2 class="text-2xl font-semibold mb-4">Sign In</h2>
-        <form class="space-y-4">
-            <input type="text" placeholder="Full Name" class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-green-700">
-            <input type="number" placeholder="Age" class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-green-700">
-            <input type="password" placeholder="Password" class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-green-700">
-            <button type="submit" class="w-full bg-green-700 text-white py-2 rounded-full hover:bg-green-800 transition">Sign In</button>
-        </form>
-    </div>
-</div>
 
 
 
@@ -306,6 +288,9 @@
       class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
 
                     </button>
+
+
+                    
 
                     <!-- Mobile Menu Button -->
                     <button id="mobileMenuBtn" class="lg:hidden p-2 text-gray-600 hover:text-gray-900">
@@ -363,11 +348,29 @@
         </div>
     </div>
 
+<!-- Modal Background -->
+<div id="signInModal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-50 flex justify-center items-center">
+
+  <div class="bg-white rounded-xl w-full max-w-sm sm:max-w-md p-6 relative">
+    <!-- Close Button -->
+    <button id="closeModal" class="absolute top-3 right-3 text-gray-600 hover:text-gray-900">✕</button>
+
+    <!-- Modal Content -->
+    <h2 class="text-2xl font-semibold mb-4">Sign In</h2>
+    <form class="space-y-4">
+      <input type="text" placeholder="Full Name" class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-green-700">
+      <input type="number" placeholder="Age" class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-green-700">
+      <input type="password" placeholder="Password" class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-green-700">
+      <button type="submit" class="w-full bg-green-700 text-white py-2 rounded-full hover:bg-green-800 transition">Sign In</button>
+    </form>
+  </div>
+</div>
 
 
 <!-- Cart Drawer -->
 <div id="cartOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden fade-in">
-    <div id="cartDrawer" class="fixed right-0 top-0 h-full w-96 bg-white shadow-xl slide-in-right flex flex-col">
+    <div id="cartDrawer" class="fixed right-0 top-0 h-full w-full max-w-xs sm:max-w-md bg-white shadow-xl slide-in-right flex flex-col">
+
         <!-- Header -->
         <div class="flex items-center justify-between p-6 border-b border-gray-200">
            <h3 class="text-lg font-semibold text-gray-900">
